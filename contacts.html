@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+    <title>SA Fordon AB</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <a href="index.html"> <h2>Hem</h2></a>
+        </div>
+        <div class="item">
+            <a href="products.html"> <h2>Produkter</h2></a>
+        </div>
+        <div class="selecteditem">
+            <a href="contacts.html"> <h2>Kontakter</h2></a>
+        </div>
+        <div class="item">
+            <a href="about.html"> <h2>Om oss</h2></a>
+        </div>
+        <div class="item">
+            <a href="shop.html"><img src="img/Shop icon.png" width="100px"></a>
+            
+        </div>
+    </div>
+
+    <div class="my-container">
+        <br><br>
+        <form>
+           <select class="selectimage" name="selectinfo" id="selectinfo" onchange="document.getElementById('contactinfo').innerHTML = document.getElementById('selectinfo').value;">
+              <option value="Noel<br>Virgingatan 2 <br>426 77  Västra Frölunda <br>Noel123@gmail.com">Noel</option>
+              <option value="fabian<br>Böggatan 5 <br>413 28  Göteborg <br>Fabianlillepenis@gmail.com">Fabian</option>
+              
+           </select>
+        </form>
+        <br>
+        <div id="contactinfo">Robert<br>Malmgatan 15<br>426 77  Västra Frölunda <br>Robert@gmail.com</div>
+        <!--Här har jag lagt in alla kontaktuppgifter för de olika personerna bakom företaget.-->
+     </div>
+     <div class="footer">
+        <h3 class="footer-h3">Mobi.com 2021 copyright</h3>
+         <p>cookies policy  vilkor</p>
+        
+    </div>
+
+
+</body>        

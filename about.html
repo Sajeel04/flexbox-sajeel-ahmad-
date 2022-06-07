@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="container">
+            <div class="item">
+                <a href="index.html"> <h2>Hem</h2></a>
+            </div>
+            <div class="item">
+                <a href="products.html"> <h2>Produkter</h2></a>
+            </div>
+            <div class="item">
+                <a href="contacts.html"> <h2>Kontakter</h2></a>
+            </div>
+            <div class="selecteditem">
+                <a href="about.html"> <h2>Om oss</h2></a>
+            </div>
+            <div class="item">
+                <a href="shop.html"><img src="img/Shop icon.png" width="100px"></a>
+
+                <div class="my-container">
+                    <br><br>
+                    
+                    <h3> Mobi.com är ett hemsida där du får begagnade och nya telefoner. </h3> 
+                    <div class="slideshow-container">
+                       <div class="mySlides fade">
+                          <img src="fabian.jpg" style="width:100%">
+                       </div>
+                       <div class="mySlides fade">
+                          <img src="Noel.jpg" style="width:100%">
+                       </div>
+                       
+                       <br>
+                       <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <!--Detta är för att skapa dots och animationer på mina bilder som finns i hemsidan-->
+                       </div>
+                    </div>
+                 </div>
+                 <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+           
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+           
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }                                       
+           
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        
+           
+                    } </script> 
+    
+</body>
+
+</html>
